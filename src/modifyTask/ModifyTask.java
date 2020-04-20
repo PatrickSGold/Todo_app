@@ -18,11 +18,21 @@ public class ModifyTask {
 
     public Integer askWhatTaskToBeModified(Map<Integer, String> database) {
         Scanner input = new Scanner(System.in);
+        Integer taskToModify = 0;
 
-        System.out.println(database);
-        System.out.println("Which of the above tasks do you wish to modify?");
+        try {
+            System.out.println(database);
+            System.out.println("Which of the above tasks do you wish to modify?");
 
-        return input.nextInt();
+            taskToModify = input.nextInt();
+        }
 
+        catch (Exception e) {
+            System.out.println("Wrong input. Task does not exist. Try again.");
+            // start over somehow
+        }
+
+        return taskToModify;
     }
+
 }

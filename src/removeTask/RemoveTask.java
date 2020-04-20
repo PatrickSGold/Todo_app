@@ -12,9 +12,18 @@ public class RemoveTask {
 
     public Integer askWhatTaskToBeRemoved(Map<Integer, String> database) {
         Scanner input = new Scanner(System.in);
+        Integer taskNumber = 0;
 
-        System.out.println(database);
-        System.out.print("Which task would you like to remove? Enter key number: ");
-        return input.nextInt();
+        try {
+            System.out.println(database);
+            System.out.print("Which task would you like to remove? Enter key number: ");
+            taskNumber = input.nextInt();
+
+        }
+        catch (Exception e) {
+            System.out.println("Wrong input. Task does not exist. Try again.");
+            // start over somehow
+        }
+        return taskNumber;
     }
 }

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class AddTask {
 
-    private int numberOfTasksInDB;
+    private int numberOfTasksInDB = 0;
 
     public void addToDatabase(Map<Integer, String> database) {
         database.put(++numberOfTasksInDB, askForTask());
