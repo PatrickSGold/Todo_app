@@ -29,11 +29,6 @@ public class AskWhatUserWantsToDo {
         return keyNumber;
     }
 
- /*  private void checkInput() {
-       if (keyNumber <= 0 || keyNumber > 5) {
-           System.out.println("Sorry, wrong input. Try again.");
-           askWhatUserWantsToDo();
-       }
 
-   }    */
+
 }
