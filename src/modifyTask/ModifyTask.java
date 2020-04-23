@@ -3,7 +3,7 @@ package modifyTask;
 import java.util.Map;
 import java.util.Scanner;
 
-public class ModifyTask implements modifyTaskInterface {
+public class ModifyTask {
 
     public void modifyTask(Map<Integer, String> database) {
         database.replace(askWhatTaskToBeModified(database), newTask());
@@ -16,5 +16,23 @@ public class ModifyTask implements modifyTaskInterface {
         return input.nextLine();
     }
 
+    public Integer askWhatTaskToBeModified(Map<Integer, String> database) {
+        Scanner input = new Scanner(System.in);
+        Integer taskToModify = 0;
+
+        try {
+            System.out.println(database);
+            System.out.println("Which of the above tasks do you wish to modify?");
+
+            taskToModify = input.nextInt();
+        }
+
+        catch (Exception e) {
+            System.out.println("Wrong input. Task does not exist. Try again.");
+            // start over somehow
+        }
+
+        return taskToModify;
+    }
 
 }

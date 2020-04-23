@@ -19,8 +19,6 @@ public class Controller {
     public void run() {
         boolean stopRunning = false;
 
-        askUser.askWhatUserWantsToDo();
-
         while(!stopRunning) {
             switch (askUser.askWhatUserWantsToDo()) {
                 case 1:
